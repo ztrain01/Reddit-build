@@ -3,7 +3,6 @@ var app = angular.module('reddit');
 app.controller('PostController', function($scope) {
   $scope.test = 'Welcome to Reddit!';
   $scope.posts = [];
-  $scope.nums = [1,2,3,4,5,6];
   
   $scope.addPost = function() {
     
@@ -19,5 +18,16 @@ app.controller('PostController', function($scope) {
     $scope.newPost = {};
   }
   
+  $scope.vote = function(index, direction) {
+    $scope.newPost = {};
+  }
+  
+  $scope.vote = function(index, direction) {
+    if(direction === 'up') {
+        $scope.posts[index].karma++;
+       } else if(direction === 'down') {
+        $scope.posts[index].karma--;
+    }
+  }
   
 });
