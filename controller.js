@@ -30,4 +30,9 @@ app.controller('PostController', function($scope) {
     }
   }
   
+  $scope.submitComment = function(index, comment) {
+    $scope.posts[index].comments.push(comment);
+    $scope.posts[index].commentForm = '';
+  }
+  
 });
