@@ -35,4 +35,10 @@ app.controller('PostController', function($scope, mainService) {
     $scope.posts[index].commentForm = '';
   }
   
+  var getData = function() {
+    $scope.posts = mainService.getData();
+  }
+  
+  getData();
+  
 });
