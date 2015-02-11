@@ -1,6 +1,6 @@
 var app = angular.module('reddit');
 
-app.controller('PostController', function($scope) {
+app.controller('PostController', function($scope, mainService) {
   $scope.test = 'Welcome to Reddit!';
   $scope.posts = [];
   
